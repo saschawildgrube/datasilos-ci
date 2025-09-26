@@ -13,7 +13,7 @@
 {
 	var SetValue = x_snc_devtools.SetValue;
 	var GetAllSupportedTables = x_snc_datasilos.GetAllSupportedTables;
-	
+	/*
 	// Define a new column 'demo'
 	SetValue('TODO',status,'columns','demo','header');
 	
@@ -24,6 +24,7 @@
 		// TODO: Add some meaningful status information or useful links for each table:
 		SetValue('TODO: Add some meaningful information about table: '+strTable,status,'tables',strTable,'demo');
 	}
+	*/
 	
 	return status;
 }]]></script>
@@ -31,14 +32,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-09-26 11:32:13</sys_created_on>
         <sys_id>52fa7e983bd8be5062bf612c95e45ae5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>DataSilosGetStatus</sys_name>
         <sys_package display_value="DataSilos CI WORK IN PROGRESS" source="x_snc_datasilos_ci">b298bad43bd8be5062bf612c95e45a98</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSilos CI WORK IN PROGRESS">b298bad43bd8be5062bf612c95e45a98</sys_scope>
         <sys_update_name>sys_script_include_52fa7e983bd8be5062bf612c95e45ae5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-09-26 11:32:13</sys_updated_on>
+        <sys_updated_on>2025-09-26 15:46:19</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
