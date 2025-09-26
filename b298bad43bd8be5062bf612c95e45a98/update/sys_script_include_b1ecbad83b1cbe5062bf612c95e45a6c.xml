@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_datasilos_ci.DataSilos</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>Implements the extension point for DataSilos.
+|
+Methods:
+* initialize()
+* GetConfig()
+* GetRelatedRecords()
+* RecordInsert()
+* RecordUpdate()
+* GetStatus()
+* PrepareQuery()
+* AccessAnalysis()</description>
+        <mobile_callable>false</mobile_callable>
+        <name>DataSilos</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DataSilos = Class.create();
+DataSilos.prototype = {
+    initialize: function() {
+    },
+
+    GetConfig: function(config)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosGetConfig))
+		{
+			config = DataSilosGetConfig(config);
+		}
+        return config;
+    },
+	
+    GetRelatedRecords: function(record)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosGetRelatedRecords))
+		{
+			return DataSilosGetRelatedRecords(record);
+		}
+        return false;
+    },		
+
+    RecordInsert: function(record)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosRecordInsert))
+		{
+			return DataSilosRecordInsert(record);
+		}
+        return false;
+    },		
+	
+    RecordUpdate: function(record)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosRecordUpdate))
+		{
+			return DataSilosRecordUpdate(record);
+		}
+        return false;
+    },	
+	
+    GetStatus: function(status)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosGetStatus))
+		{
+			status = DataSilosGetStatus(status);
+		}
+        return status;
+    },	
+
+	PrepareQuery: function(record,
+		strTable,
+		strPrefix,
+		strUserSysId,
+		bAllowEmptySysId,
+		aUserSupervisorSilos,
+		aUserFulfillerSilos,
+		aUserGroups,
+		nUserSecurityClearance)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosPrepareQuery))
+		{
+			return DataSilosPrepareQuery(record,
+				strTable,
+				strPrefix,
+				strUserSysId,
+				bAllowEmptySysId,
+				aUserSupervisorSilos,
+				aUserFulfillerSilos,
+				aUserGroups,
+				nUserSecurityClearance);
+		}
+        return false;
+    },		
+
+    AccessAnalysis: function(result)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsActive() && IsFunction(x_snc_datasilos_ci.DataSilosAccessAnalysis))
+		{
+			result = DataSilosAccessAnalysis(result);
+		}
+        return result;
+    },		
+
+    type: 'DataSilos'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-26 11:40:39</sys_created_on>
+        <sys_id>b1ecbad83b1cbe5062bf612c95e45a6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DataSilos</sys_name>
+        <sys_package display_value="DataSilos CI WORK IN PROGRESS" source="x_snc_datasilos_ci">b298bad43bd8be5062bf612c95e45a98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSilos CI WORK IN PROGRESS">b298bad43bd8be5062bf612c95e45a98</sys_scope>
+        <sys_update_name>sys_script_include_b1ecbad83b1cbe5062bf612c95e45a6c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-26 11:40:39</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

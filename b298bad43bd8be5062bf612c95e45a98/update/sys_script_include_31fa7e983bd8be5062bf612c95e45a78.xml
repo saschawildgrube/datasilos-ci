@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_datasilos_ci.AppInstall</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>This script installs DataSilos CI.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>AppInstall</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function AppInstall()
+{
+	var installer = new x_snc_devtools.InstallerAPI(x_snc_devtools.GetAppName('x_snc_datasilos_ci'));
+	
+	// TODO: Add your installation code here...
+	
+	return installer.Finish();
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-26 11:32:10</sys_created_on>
+        <sys_id>31fa7e983bd8be5062bf612c95e45a78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AppInstall</sys_name>
+        <sys_package display_value="DataSilos CI WORK IN PROGRESS" source="x_snc_datasilos_ci">b298bad43bd8be5062bf612c95e45a98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSilos CI WORK IN PROGRESS">b298bad43bd8be5062bf612c95e45a98</sys_scope>
+        <sys_update_name>sys_script_include_31fa7e983bd8be5062bf612c95e45a78</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-26 11:32:10</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>
